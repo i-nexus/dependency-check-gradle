@@ -383,7 +383,7 @@ abstract class AbstractAnalyze extends DefaultTask {
                         null, Confidence.HIGHEST)
             }
             d.addProjectReference(configurationName)
-        } else {
+        } else if (deps != null) {
             deps.forEach { it.addProjectReference(configurationName) }
         }
     }
